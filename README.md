@@ -19,6 +19,7 @@ A complete list of patterns in this repository is as follows.
 	<li>Abstract Factory Design Pattern</li>
 	<li>Singleton Pattern</li>
 	<li>Builder Pattern</li>
+	<li>Prototype Pattern</li>
 	</ul>
 	<li>Structural Patterns</li>
 	<ul>
