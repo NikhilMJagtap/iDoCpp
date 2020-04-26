@@ -124,5 +124,7 @@ int main()
 	Troop* arch1 = troop_factory.create("archer", "Legolas");
 	barb1->summon();
 	arch1->summon();
+	delete barb1;
+	delete arch1;
 	return 0;
 }
