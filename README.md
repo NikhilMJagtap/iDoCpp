@@ -22,6 +22,7 @@ A complete list of patterns in this repository is as follows.
 	<li>Prototype Pattern</li>
 	<li>Lazy Initialisation Pattern</li>
 	<li>Multiton Pattern</li>
+	<li>Dependency Injection Pattern</li>
 	</ul>
 	<li>Structural Patterns</li>
 	<ul>
