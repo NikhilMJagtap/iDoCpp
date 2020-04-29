@@ -23,10 +23,11 @@ A complete list of patterns in this repository is as follows.
 	<li>Lazy Initialisation Pattern</li>
 	<li>Multiton Pattern</li>
 	<li>Dependency Injection Pattern</li>
+	<li>Object Pool Pattern <i>(Not complete yet)</i></li>
 	</ul>
 	<li>Structural Patterns</li>
 	<ul>
-	<li>Working on it</li>
+	<li>Adapter Pattern</li>
 	</ul>
 	<li>Behavioural Patterns</li>
 	<ul>
