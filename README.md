@@ -29,6 +29,7 @@ A complete list of patterns in this repository is as follows.
 	<ul>
 	<li>Adapter Pattern</li>
 	<li>Bridge Pattern</li>
+	<li>Composite Pattern</li>
 	</ul>
 	<li>Behavioural Patterns</li>
 	<ul>
