@@ -32,7 +32,8 @@ A complete list of patterns in this repository is as follows.
 	<li>Composite Pattern</li>
 	<li>Decorator Pattern</li>
 	<li>Proxy Pattern</li>
-	<li>Flyweight Patterns</li>
+	<li>Flyweight Pattern</li>
+	<li>Facade Pattern</li>
 	</ul>
 	<li>Behavioural Patterns</li>
 	<ul>
