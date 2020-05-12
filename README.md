@@ -33,7 +33,8 @@ A complete list of patterns in this repository is as follows.
 	<li>Decorator Pattern</li>
 	<li>Proxy Pattern</li>
 	<li>Flyweight Pattern</li>
-	<li>Facade Pattern</li>
+	<li>Facade Pattern <i>(Needs changes)</i></li>
+	<li>Front Contoller Pattern</li>
 	</ul>
 	<li>Behavioural Patterns</li>
 	<ul>
