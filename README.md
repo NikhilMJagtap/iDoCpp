@@ -35,13 +35,14 @@ A complete list of patterns in this repository is as follows.
 	<li>Flyweight Pattern</li>
 	<li>Facade Pattern <i>(Needs changes)</i></li>
 	<li>Front Contoller Pattern</li>
+	<li>Marker Interface Pattern</li>
 	</ul>
 	<li>Behavioural Patterns</li>
 	<ul>
-	<li>Working on it</li>
+	<li>Starting</li>
 	</ul>
 	<li>Concurrency Patterns</li>
 	<ul>
-	<li>Working on it</li>
+	<li>On hold as of now.</li>
 	</ul>
 </ol>
