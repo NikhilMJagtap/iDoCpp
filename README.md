@@ -39,7 +39,7 @@ A complete list of patterns in this repository is as follows.
 	</ul>
 	<li>Behavioural Patterns</li>
 	<ul>
-	<li>Starting</li>
+	<li>Iterator Pattern</li>
 	</ul>
 	<li>Concurrency Patterns</li>
 	<ul>
