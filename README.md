@@ -40,6 +40,7 @@ A complete list of patterns in this repository is as follows.
 	<li>Behavioural Patterns</li>
 	<ul>
 	<li>Iterator Pattern</li>
+	<li>Chain of Responsibilty Pattern</li>
 	</ul>
 	<li>Concurrency Patterns</li>
 	<ul>
