@@ -41,6 +41,7 @@ A complete list of patterns in this repository is as follows.
 	<ul>
 	<li>Iterator Pattern</li>
 	<li>Chain of Responsibilty Pattern</li>
+	<li>Strategy Pattern</li>
 	</ul>
 	<li>Concurrency Patterns</li>
 	<ul>
