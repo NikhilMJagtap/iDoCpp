@@ -11,7 +11,12 @@
 	object is processed and new state is assigned.
 	In this example, consider a transaction, implemented as class Transaction. The transaction can be in some
 	states, say Processing, Completed or Failed states. State interface is used for all the states
-	ProcessingState, CompleteState, FailedState.
+	ProcessingState, CompleteState, FailedState. Transaction by default goes into the processing state
+	so the constructor of transaction takes the state. (Note that we can use flyweight pattern here
+	to avoid making so many state objects paired with AbstractFactory pattern.)
+	Process function of transaction calls the function of state. Thus, execution depends on the state
+	of the object. We can implement it in a way that transaction;s state changes with the process calls.
+	
 */
 
 // state interface
