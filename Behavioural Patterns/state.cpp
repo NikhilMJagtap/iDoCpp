@@ -1,13 +1,30 @@
 #include<iostream>
 
+/*
+	Sometimes, we have to maintain a state of the object. The object can go from one state to another, and
+	its behaviour depends on the state. For example, a process which is in pending state, will eventually
+	go to computing and many other subsequent states.
+	State design pattern makes this very easy to implement. We create multiple states whichever we need.
+	The state interface or abstract class can be used to achieve it in better way. Then the object has a
+	state member. Ideally, we should change the state of the object whenever we use some processing
+	of that state. We can pass the object to the processing function and new state as well. Thus, the 
+	object is processed and new state is assigned.
+	In this example, consider a transaction, implemented as class Transaction. The transaction can be in some
+	states, say Processing, Completed or Failed states. State interface is used for all the states
+	ProcessingState, CompleteState, FailedState.
+*/
+
+// state interface
 class State
 {
 public:
 	~State() = default;
+	// function to process the state
 	virtual void process() = 0;
 	std::string state;
 };
 
+// a state for transaction
 class ProcessingState : public State
 {
 public:
@@ -15,12 +32,14 @@ public:
 	{
 		state = "Processing";
 	}
+	// process function specific to this state
 	void process()
 	{
 		std::cout << "Processing ...\n";
 	}
 };
 
+// a state for transaction
 class CompleteState : public State
 {
 public:
@@ -34,6 +53,7 @@ public:
 	}
 };
 
+// a state for transaction
 class FailedState : public State
 {
 public:
@@ -47,9 +67,11 @@ public:
 	}
 };
 
-class Transaction : public State
+// Transaction
+class Transaction
 {
 private:
+	// state of the transaction
 	State* state;
 public:
 	Transaction(State* state)
@@ -58,11 +80,13 @@ public:
 
 	}
 
+	// setting the state of transaction
 	void set_state(State* new_state)
 	{
 		state = new_state;
 	}
 
+	// processing based on the state
 	void process()
 	{
 		state->process();
