@@ -43,6 +43,8 @@ A complete list of patterns in this repository is as follows.
 	<li>Chain of Responsibilty Pattern</li>
 	<li>Strategy Pattern</li>
 	<li>Command Pattern</li>
+	<li>State Pattern</li>
+	<li>Visitor Pattern</li>
 	</ul>
 	<li>Concurrency Patterns</li>
 	<ul>
