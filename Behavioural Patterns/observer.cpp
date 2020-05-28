@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<vector>
 /*
 	A lot of softwares are event driven. An event in one object might trigger other objects. Observer pattern
 	is helpful in order to solve this requirement. In observer pattern, an object (called as subject xD) 
@@ -21,7 +21,81 @@
 	coupled.
 */
 
+class Supplier
+{
+private:
+	std::string name;
+public:
+	Supplier(std::string name)
+	: name(name) 
+	{
+
+	}
+	~Supplier() = default;
+	void notify()
+	{
+		std::cout << name << " is notified!\n";
+	}
+};
+
+class Shop
+{
+private:
+	int stock;
+	std::string name;
+	int threshold = 2;
+	std::vector<Supplier*> observers;
+public:
+	Shop(std::string name)
+	: name(name), stock(10)
+	{
+
+	}
+
+	void purchase(int n)
+	{
+		if(stock < n)
+		{
+			std::cout << "Out of stock!\n";
+			return;
+		}
+		stock -= n;
+		std::cout << "Purchased!\n";
+		if(stock <= threshold)
+		{
+			for(int i=0; i<observers.size(); ++i)
+				observers.at(i)->notify();
+		}
+		
+	}
+
+	void observe(Supplier *supplier)
+	{
+		observers.push_back(supplier);
+	}
+
+	void restock(int n)
+	{
+		stock += n;
+		std::cout << "Restocked!\n";
+	}
+};
+
 int main()
 {
+	Shop *shop = new Shop("SuperMarkt");
+	Supplier *supplier1 = new Supplier("Supplier One");
+	Supplier *supplier2 = new Supplier("Supplier Two");
+	shop->observe(supplier1);
+	shop->observe(supplier2);
+	shop->purchase(5);
+	// no notifications yet
+	shop->purchase(3);
+	// notify should get called
+	shop->restock(3);
+	Supplier *supplier3 = new Supplier("Supplier Three");
+	shop->observe(supplier3);
+	shop->purchase(3);
+	delete shop, supplier1, supplier2, supplier3;
 	return 0;
 }
