@@ -45,6 +45,7 @@ A complete list of patterns in this repository is as follows.
 	<li>Command Pattern</li>
 	<li>State Pattern</li>
 	<li>Visitor Pattern</li>
+	<li>Observer Pattern</li>
 	</ul>
 	<li>Concurrency Patterns</li>
 	<ul>

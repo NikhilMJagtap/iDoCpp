@@ -9,6 +9,13 @@
 	but we are not doing that here. 
 	Observer pattern makes it easier to solve the one-to-many dependency making them loosely coupled. 
 
+	In this example, I have a Shop class which has some stock of items. One can purchase the item from
+	stock and restock it. The stock is reduced and increased alongside. There is also supplier class.
+	Here, shop is a subject and Suppliers are observer. Whenever the stock in shop goes below some
+	threshold (member of shop class), all observers of that shop are notified by calling the notify method of 
+	the observer. In the main function, a shop object is created and some suppliers are added to observe
+	the shop object.
+
 	IMPORTANT:
 	Observer pattern is different that PubSub model and reactive programming.
 	Reactive programming is out of the scope of this file but I am providing something very famous in this
