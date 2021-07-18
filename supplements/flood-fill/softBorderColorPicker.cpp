@@ -22,7 +22,7 @@ HSLAPixel SoftBorderColorPicker::operator()(point p)
         HSLAPixel *pixel = img.getPixel(i, j);
         if((i-p.x)*(i-p.x) + (j-p.y)*(j-p.y) <= borderwidth*borderwidth) {
           pixels_on_border.push_back(*pixel);
-          if((i-c.x)*(i-c.x) + (j-c.y)*(j-c.y) > tolerance*tolerance) {
+          if(centerPixel->dist(*pixel) > tolerance) {
             pixels_on_border_outside_fill.push_back(*pixel);  
           }
         }
