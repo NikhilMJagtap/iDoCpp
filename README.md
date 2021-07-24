@@ -12,7 +12,7 @@ The most beneficial advantage of these design patterns is Communication. Instead
 
 #### What this repo has
 
-##### <s>Old Design Patterns Introduction <s>
+##### <s>Old Design Patterns Introduction </s>
 
 <s>Exactly what the title says. I will be adding more patterns as I get time, may be in some other language as well. As of now, patterns are divided into four categories.
 
