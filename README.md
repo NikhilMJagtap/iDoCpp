@@ -1,4 +1,4 @@
-<img src="supplements/flood-fill/images/bfs_negative.gif"/>
+<img src="supplements/flood-fill/images/bfs_negative.gif" width="480px" height="250px"/>
 
 ### Bunch of C++ code I did when I was not doing anything else.
 
