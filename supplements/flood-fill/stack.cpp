@@ -70,8 +70,9 @@ T Stack<T>::pop(){
      */
     num_items = num_items - 1;
     T topElement = items[num_items];
-    if (num_items < max_items/SHRINKRATE &&  max_items >= DEFAULTCAPACITY) {
-        resize(max_items/EXPANSIONFACTOR);
+    if (num_items < max_items/SHRINKRATE) {
+        if (max_items/EXPANSIONFACTOR >= DEFAULTCAPACITY)
+            resize(max_items/EXPANSIONFACTOR);
     }
     return topElement;
 };

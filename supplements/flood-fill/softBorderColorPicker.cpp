@@ -15,15 +15,15 @@ HSLAPixel SoftBorderColorPicker::operator()(point p)
     centre c = p.c;
     HSLAPixel *centerPixel = img.getPixel(c.x, c.y);
     HSLAPixel *currentPixel = img.getPixel(p.x, p.y);
-    vector<HSLAPixel> pixels_on_border;
-    vector<HSLAPixel> pixels_on_border_outside_fill;
+    vector<HSLAPixel*> pixels_on_border;
+    vector<HSLAPixel*> pixels_on_border_outside_fill;
     for (int i=0; i<img.width(); ++i) {
       for(int j=0; j<img.height(); ++j) {
         HSLAPixel *pixel = img.getPixel(i, j);
         if((i-p.x)*(i-p.x) + (j-p.y)*(j-p.y) <= borderwidth*borderwidth) {
-          pixels_on_border.push_back(*pixel);
+          pixels_on_border.push_back(pixel);
           if(centerPixel->dist(*pixel) > tolerance) {
-            pixels_on_border_outside_fill.push_back(*pixel);  
+            pixels_on_border_outside_fill.push_back(pixel);  
           }
         }
       }
@@ -34,10 +34,10 @@ HSLAPixel SoftBorderColorPicker::operator()(point p)
     double h=0.0, s=0.0, l=0.0, a=0.0;
     int count = 0;
     for(size_t i=0; i<pixels_on_border.size(); ++i) {
-      h += pixels_on_border.at(i).h;
-      s += pixels_on_border.at(i).s;
-      l += pixels_on_border.at(i).l;
-      a += pixels_on_border.at(i).a;
+      h += pixels_on_border.at(i)->h;
+      s += pixels_on_border.at(i)->s;
+      l += pixels_on_border.at(i)->l;
+      a += pixels_on_border.at(i)->a;
       count++;
     }
     return HSLAPixel(
